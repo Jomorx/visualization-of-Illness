@@ -263,6 +263,7 @@ onMounted(async () => {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  overflow: auto;
   &-left {
     width: 300px;
     color: white;
@@ -271,11 +272,12 @@ onMounted(async () => {
 
   &-center {
     flex: 1;
+    min-width: 920px;
   }
 
   &-right {
+    min-width: 330px;
     margin-top: 10px;
-
     width: 330px;
     color: white;
     overflow-y: scroll;
