@@ -216,7 +216,7 @@ const initLine = () => {
     },
     xAxis: {
       type: 'category',
-      data: store.cityDetail.map(({ city }) => city).slice(0,4),
+      data: store.cityDetail.map(({ city }) => city).slice(0,5),
       axisLine:{
         lineStyle:{
           color:'#fff'
@@ -236,7 +236,8 @@ const initLine = () => {
     },
     series: [
       {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        name:'高风险地区',
+        data: store.cityDetail.map(({ highRiskAreaNum }) => highRiskAreaNum).slice(0,5),
         type: 'line',
         smooth: true
       }
